@@ -8,6 +8,7 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 
+#define BUFFER_SIZE 1024
 #define DELIM " \t\n"
 extern char **environ;
 
@@ -25,6 +26,7 @@ char *_strcpy(char *dest, char *src);
 int _strlen(char *str);
 int _strcmp(char *str1, char *str2);
 
+ssize_t _getline(char **line, size_t length, int position);
 void _env(void);
 void print_error(char *prog, char *cmd, int ctr);
 char *int_to_str(int n);

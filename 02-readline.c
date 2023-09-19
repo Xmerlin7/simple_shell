@@ -1,4 +1,11 @@
 #include "main.h"
+
+/**
+ * readline - reads a line of input string
+ * 
+ * @line : return value of isatty func.
+ * RETURN : input string
+*/
 char *read_line(void)
 {
     char *line = NULL;

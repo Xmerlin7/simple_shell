@@ -1,4 +1,15 @@
 #include "main.h"
+
+/**
+ * exec func : forks a child process to exec with arg
+ * execve : replace the child process with command
+ * @command : array represents command and its arg
+ * @argv : array represents arg pass to the program
+ * @idx : index of command in the input
+ * 
+ * RETURN : exec command , and if failure returns 127
+*/
+
 int exec_command(char **command, char **argv, int idx)
 {
     pid_t child;
