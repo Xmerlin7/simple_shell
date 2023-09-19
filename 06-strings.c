@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * _strlen - return the length of a string
+ * @str : the string wants to check its length
+ * 
+ * RETURN : int length of string
+*/
+
 int _strlen(char *str)
 {
     int len;
@@ -8,6 +15,15 @@ int _strlen(char *str)
         ;
     return (len + 1);
 }
+
+/**
+ * _strcpy - copies a string
+ * @dest : the destination
+ * @sec : the source
+ * 
+ * RETURN : pointer to destination
+*/
+
 char *_strcpy(char *dest, char *src)
 {
     int i;
@@ -20,6 +36,14 @@ char *_strcpy(char *dest, char *src)
 
     return (dest);
 }
+
+/**
+ * _strdup - duplicates a string
+ * @str : the string to be dplicated
+ * 
+ * RETURN : refer to duplicated string
+*/
+
 char *_strdup(char *str)
 {
     char *tmp = NULL;
@@ -31,6 +55,14 @@ char *_strdup(char *str)
     _strcpy(tmp, str);
     return (tmp);
 }
+/**
+ * _strcmp - make comparision of two strings
+ * @str1 : first string
+ * @str2 :second string
+ * 
+ * RETURN : ret if it is not equal to NULL
+*/
+
 int _strcmp(char *str1, char *str2)
 {
     int i, ret;
@@ -43,6 +75,15 @@ int _strcmp(char *str1, char *str2)
     }
     return (ret);
 }
+
+/**
+ * _strcat : concatenates two strings
+ * @ destination : the destination file 
+ * @source : the source buffer
+ * 
+ * RETURN : destination buffer
+*/
+
 char *_strcat(char *destination, const char *source)
 {
     char *ptr = destination + strlen(destination);

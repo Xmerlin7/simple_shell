@@ -1,9 +1,18 @@
 #include "main.h"
+
+/**
+ * main : entry point
+ * @argc : arg count
+ * @argv : arg vector
+ * 
+ * RETURN : 0 on success , and -1 if failure
+*/
+
 char *line = NULL;
 char **command;
 int ss;
 int i = 0, idx = 0;
-int main(int arc, char **argv)
+int main(int argc, char **argv)
 {
     (void)arc;
 

@@ -1,4 +1,14 @@
 #include "main.h"
+
+/**
+ * _getenv - takes pointer char to array to represent env
+ * @environ : search for env variable
+ * _strdup : copy a string to token it using _strtok
+ * _strtok : split the copied string into key_value 
+ * 
+ * RETURN : if success value of env , if failure return NULL
+*/
+
 char *_getenv(char *name)
 {
     char *tmp = NULL;
@@ -23,6 +33,15 @@ char *_getenv(char *name)
 
     return (NULL);
 }
+
+/**
+ * _getpath : takes pointer char to array represents the command name
+ * @stat : check if files exists
+ * @_path : it tokenize to be allocated memory for full_path
+ * 
+ * RETURN : if success full_path , if failur return NULL 
+*/
+
 char *_getpath(char *command) /*add to main.h*/
 {
     char *_path, *full_path, *tmp;
