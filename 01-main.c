@@ -4,15 +4,15 @@
  * main : entry point
  * @argc : arg count
  * @argv : arg vector
- * 
+ *
  * RETURN : 0 on success , and -1 if failure
-*/
+ */
 
 char *line = NULL;
 char **command;
-int ss;
+int sta;
 int i = 0, idx = 0;
-int main(int argc, char **argv)
+int main(int arc, char **argv)
 {
     (void)arc;
 
@@ -33,11 +33,11 @@ int main(int argc, char **argv)
             free2D(command);
             continue;
         }
-        else if (_strcmp(command[0], "exit") == 0)
-            break;
-        else if (_strcmp(command[0], "env") == 0)
-            print_env();
-        ss = exec_command(command, argv, idx);
+        if (is_bltn(command[0]))
+
+            bltn_handler(command, argv, &sta, idx);
+        else
+            sta = exec_command(command, argv, idx);
     }
     return (0);
 }

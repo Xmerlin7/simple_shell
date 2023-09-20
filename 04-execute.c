@@ -6,9 +6,9 @@
  * @command : array represents command and its arg
  * @argv : array represents arg pass to the program
  * @idx : index of command in the input
- * 
+ *
  * RETURN : exec command , and if failure returns 127
-*/
+ */
 
 int exec_command(char **command, char **argv, int idx)
 {

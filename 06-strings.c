@@ -3,9 +3,9 @@
 /**
  * _strlen - return the length of a string
  * @str : the string wants to check its length
- * 
+ *
  * RETURN : int length of string
-*/
+ */
 
 int _strlen(char *str)
 {
@@ -20,9 +20,9 @@ int _strlen(char *str)
  * _strcpy - copies a string
  * @dest : the destination
  * @sec : the source
- * 
+ *
  * RETURN : pointer to destination
-*/
+ */
 
 char *_strcpy(char *dest, char *src)
 {
@@ -40,9 +40,9 @@ char *_strcpy(char *dest, char *src)
 /**
  * _strdup - duplicates a string
  * @str : the string to be dplicated
- * 
+ *
  * RETURN : refer to duplicated string
-*/
+ */
 
 char *_strdup(char *str)
 {
@@ -59,9 +59,9 @@ char *_strdup(char *str)
  * _strcmp - make comparision of two strings
  * @str1 : first string
  * @str2 :second string
- * 
+ *
  * RETURN : ret if it is not equal to NULL
-*/
+ */
 
 int _strcmp(char *str1, char *str2)
 {
@@ -78,11 +78,11 @@ int _strcmp(char *str1, char *str2)
 
 /**
  * _strcat : concatenates two strings
- * @ destination : the destination file 
+ * @ destination : the destination file
  * @source : the source buffer
- * 
+ *
  * RETURN : destination buffer
-*/
+ */
 
 char *_strcat(char *destination, const char *source)
 {

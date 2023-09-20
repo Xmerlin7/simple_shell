@@ -2,10 +2,10 @@
 
 /**
  * **_tknizer - splits a string into words
- * repeat delimiters are ignored 
+ * repeat delimiters are ignored
  * @line : the string to be tokenized
  * RETUERN : the array of tokens , or NULL on failure
-*/
+ */
 
 char **_tknizer(char *line)
 {
