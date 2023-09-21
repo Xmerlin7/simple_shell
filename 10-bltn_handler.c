@@ -3,9 +3,7 @@
 int is_bltn(char *cmd)
 {
     char *bltn[] = {
-        "exit", "env", "setenv"
-                       "cd",
-        NULL};
+        "exit", "env", "setenv", "cd", NULL};
     int i;
     for (i = 0; bltn[i]; i++)
     {
@@ -23,6 +21,8 @@ void bltn_handler(char **cmd, char **argv, int *sta, int idx)
         exit_shell(cmd, argv, sta, idx);
     else if (_strcmp(cmd[0], "env") == 0)
         print_env(cmd, sta);
+    else if (_strcmp(cmd[0], "cd") == 0)
+        _cd(cmd);
 }
 void exit_shell(char **cmd, char **argv, int *sta, int idx)
 {
@@ -42,9 +42,8 @@ void exit_shell(char **cmd, char **argv, int *sta, int idx)
             write(STDERR_FILENO, argv[0], _strlen(argv[0]));
             write(STDERR_FILENO, ": ", 2);
             write(STDERR_FILENO, index, _strlen(index));
-            write(STDERR_FILENO, ": ", 2);
-            write(STDERR_FILENO, cmd[1], _strlen(cmd[1]));
             write(STDERR_FILENO, err, _strlen(err));
+            write(STDERR_FILENO, cmd[1], _strlen(cmd[1]));
             write(STDERR_FILENO, "\n", 1);
             free(index);
             free2D(cmd);
@@ -67,4 +66,23 @@ void print_env(char **cmd, int *sta)
     }
     free2D(cmd);
     *sta = 0;
+}
+int _cd(char **args)
+{
+
+    if (args[1] == NULL)
+    {
+        if (chdir(_getenv("HOME")) != 0)
+        {
+            perror("hsh:");
+        }
+    }
+    else
+    {
+        if (chdir(args[1]) != 0)
+        {
+            perror("hsh:");
+        }
+    }
+    return (1);
 }

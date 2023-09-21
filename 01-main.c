@@ -8,12 +8,12 @@
  * RETURN : 0 on success , and -1 if failure
  */
 
-char *line = NULL;
-char **command;
-int sta;
-int i = 0, idx = 0;
 int main(int arc, char **argv)
 {
+    char *line = NULL;
+    char **command;
+    int sta;
+    int idx = 0;
     (void)arc;
 
     while (1)
@@ -24,7 +24,7 @@ int main(int arc, char **argv)
             if (isatty(STDERR_FILENO))
                 write(STDOUT_FILENO, "\n", 1);
 
-            return (0);
+            return (sta);
         }
         idx++;
         command = _tknizer(line);
@@ -39,5 +39,4 @@ int main(int arc, char **argv)
         else
             sta = exec_command(command, argv, idx);
     }
-    return (0);
 }

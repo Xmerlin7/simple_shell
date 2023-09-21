@@ -23,6 +23,7 @@ void bltn_handler(char **cmd, char **argv, int *sta, int idx);
 int is_bltn(char *cmd);
 void print_env(char **cmd, int *sta);
 void exit_shell(char **cmd, char **argv, int *sta, int idx);
+int _cd(char **args);
 
 char *_strcat(char *destination, const char *source);
 
