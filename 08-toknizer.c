@@ -19,7 +19,7 @@ char **_tknizer(char *line)
     tmp = _strdup(line);
 
     token = strtok(tmp, DELIM);
-    if (!token)
+    if (token == NULL)
     {
         free(tmp), tmp = NULL;
         free(line), line = NULL;

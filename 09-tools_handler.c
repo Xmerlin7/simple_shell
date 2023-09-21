@@ -9,7 +9,7 @@ void free2D(char **arr)
         free(arr[i]);
         arr[i] = NULL;
     }
-    free(arr);
+    free(arr), arr = NULL;
 }
 void print_error(char *prog, char *cmd, int ctr)
 {

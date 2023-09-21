@@ -28,7 +28,7 @@ int main(int arc, char **argv)
         }
         idx++;
         command = _tknizer(line);
-        if (command == NULL) /* handels the space*/
+        if (!command) /* handels the space*/
         {
             free2D(command);
             continue;
