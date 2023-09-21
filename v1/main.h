@@ -10,7 +10,6 @@
 
 #define BUFFER_SIZE 1024
 #define DELIM " \t\n"
-#define PATH_MAX 1024
 extern char **environ;
 
 char *read_line(void);
@@ -19,6 +18,7 @@ void free2D(char **arr);
 int exec_command(char **command, char **argv, int idx);
 char *_getenv(char *name);
 char *_getpath(char *cmd);
+
 void bltn_handler(char **cmd, char **argv, int *sta, int idx);
 int is_bltn(char *cmd);
 void print_env(char **cmd, int *sta);
