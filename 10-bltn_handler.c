@@ -3,9 +3,7 @@
 int is_bltn(char *cmd)
 {
     char *bltn[] = {
-        "exit", "env", "setenv"
-                       "cd",
-        NULL};
+        "exit", "env", "setenv", "cd", NULL};
     int i;
     for (i = 0; bltn[i]; i++)
     {
@@ -42,9 +40,8 @@ void exit_shell(char **cmd, char **argv, int *sta, int idx)
             write(STDERR_FILENO, argv[0], _strlen(argv[0]));
             write(STDERR_FILENO, ": ", 2);
             write(STDERR_FILENO, index, _strlen(index));
-            write(STDERR_FILENO, ": ", 2);
-            write(STDERR_FILENO, cmd[1], _strlen(cmd[1]));
             write(STDERR_FILENO, err, _strlen(err));
+            write(STDERR_FILENO, cmd[1], _strlen(cmd[1]));
             write(STDERR_FILENO, "\n", 1);
             free(index);
             free2D(cmd);
