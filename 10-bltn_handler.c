@@ -21,8 +21,6 @@ void bltn_handler(char **cmd, char **argv, int *sta, int idx)
         exit_shell(cmd, argv, sta, idx);
     else if (_strcmp(cmd[0], "env") == 0)
         print_env(cmd, sta);
-    else if (_strcmp(cmd[0], "cd") == 0)
-        _cd(cmd);
 }
 void exit_shell(char **cmd, char **argv, int *sta, int idx)
 {
@@ -66,23 +64,4 @@ void print_env(char **cmd, int *sta)
     }
     free2D(cmd);
     *sta = 0;
-}
-int _cd(char **args)
-{
-
-    if (args[1] == NULL)
-    {
-        if (chdir(_getenv("HOME")) != 0)
-        {
-            perror("hsh:");
-        }
-    }
-    else
-    {
-        if (chdir(args[1]) != 0)
-        {
-            perror("hsh:");
-        }
-    }
-    return (1);
 }

@@ -5,7 +5,7 @@ int is_positive(char *str)
 
     if (!str)
         return (0);
-    for (i = 0; *(str + i); i++)
+    for (i = 0; str[i]; i++)
     {
         if (str[i] < '0' || str[i] > '9')
             return (0);
