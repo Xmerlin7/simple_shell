@@ -36,5 +36,7 @@ int main(int arc, char **argv)
 	else
 	sta = exec_command(command, argv, idx);
 	}
-	return (0);
 }
+
+
+
