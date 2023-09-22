@@ -43,3 +43,7 @@ this Shell Project was completed using C language
 - wait3 (man 2 wait3)
 - wait4 (man 2 wait4)
 - write (man 2 write)
+
+##Authors
+- Seif Allah [Github](https://github.com/Xmerlin7)
+- Bassant Khaled [Github](https://github.com/BassantKhaled259)
