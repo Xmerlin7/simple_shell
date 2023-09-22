@@ -2,6 +2,8 @@
 
 this Shell Project was completed using C language
 
+![The Gates of Shell”, by Spencer Cheng, featuring Julien Barbier](https://github.com/Xmerlin7/simple_shell/assets/136097724/0c59f38d-ca2c-4eda-ab4e-564c3c18e63f)
+
 ## Requeriments
 
 - Programs and functions will be compiled with gcc using the flags -Wall -Werror -Wextra -pedantic and -std=gnu89
@@ -44,6 +46,6 @@ this Shell Project was completed using C language
 - wait4 (man 2 wait4)
 - write (man 2 write)
 
-##Authors
+## Authors
 - Seif Allah [Github](https://github.com/Xmerlin7)
 - Bassant Khaled [Github](https://github.com/BassantKhaled259)
