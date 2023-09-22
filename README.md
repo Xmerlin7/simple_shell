@@ -1,4 +1,4 @@
-# Welcome to our Simple_Shell Project
+# Welcome to our Simple_Shell Project for ALX SWE.
 
 this Shell Project was completed using C language
 
