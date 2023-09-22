@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -25,7 +26,6 @@ void print_env(char **cmd, int *sta);
 void exit_shell(char **cmd, char **argv, int *sta, int idx);
 
 char *_strcat(char *destination, const char *source);
-
 char *_strdup(char *str);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *str);
@@ -41,4 +41,5 @@ char *int_to_str(int n);
 void rev_str(char *str, int len);
 int print_string(char *str);
 int _putchar(char *c);
+
 #endif /* MAIN_H */
